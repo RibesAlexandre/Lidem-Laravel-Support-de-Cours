@@ -1,0 +1,2 @@
+<p>Bonjour {{ $name }}</p>
+

@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('bonjour/{name}', function($name) {
+   return view('bonjour')->with('name', $name);
+})->name('bonjour');
+
 Route::get('/lidem', function() {
     $users = [
         'hugo',
@@ -28,6 +32,7 @@ Route::get('/lidem', function() {
         'axel',
         'ludo',
         'kader',
+        'robin',
     ];
 
    return view('lidem', compact('users'));
